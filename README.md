@@ -44,7 +44,9 @@ User | Operation | time
 token的介绍：https://www.jianshu.com/p/24825a2683e6
 
 5.连接上的客户端如果30s没有相应，那么关闭描述符
+
 https://mp.weixin.qq.com/s?__biz=MjM5ODYxMDA5OQ==&mid=2651959957&idx=1&sn=a82bb7e8203b20b2a0cb5fc95b7936a5&chksm=bd2d07498a5a8e5f9f8e7b5aeaa5bd8585a0ee4bf470956e7fd0a2b36d132eb46553265f4eaf&mpshare=1&scene=23&srcid=0718Qlp4AVKnZq1E1f144pE6#rd
+
 此处采用轮询扫描法，设置Map<string,int> //<用户名,上一次发送包的时间>
 设置一个timer,每秒都轮询Map中的元素，并将时间差大于30s的客户端连接断开 
 
